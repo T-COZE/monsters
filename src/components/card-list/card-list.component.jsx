@@ -1,5 +1,6 @@
 import Card from '../card/card.component';
 import './card-list.styles.css';
+import PropTypes from 'prop-types';
 
 const CardList = ({ monsters }) => (
   <div className='card-list'>
@@ -8,5 +9,8 @@ const CardList = ({ monsters }) => (
     })}
   </div>
 );
-
+CardList.propTypes = {
+  monsters: <PropTypes className="ob"></PropTypes>,
+  
+};
 export default CardList;

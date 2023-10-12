@@ -1,4 +1,5 @@
 import './card.styles.css';
+import PropTypes from 'prop-types'
 
 const Card = ({ monster }) => {
   const { id, name, email } = monster;
@@ -14,5 +15,9 @@ const Card = ({ monster }) => {
     </div>
   );
 };
+Card.propTypes = {
+    monster: <PropTypes className="ob"></PropTypes>,
+    
+  };
 
 export default Card;
