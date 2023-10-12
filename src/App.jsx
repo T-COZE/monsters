@@ -3,6 +3,20 @@ import CardList from './components/card-list/card-list.components'
 import SearchBox from './components/search-box/search-box.component'
 import './App.css'
 
+function App() {
+return (
+  <div className='App'>
+      <h1 className='app-title'>Monster Rolodex</h1>
+    <SearchBox 
+      onChangeHandler = {onSearchChange} 
+      placeholder='search monsters'
+      className='monsters-search-box'
+      />
+    <CardList monsters={filteredMonsters} />
+      </div>
+)
+}
+
 class App extends Component {
   constructor(){
     super()
@@ -37,15 +51,7 @@ class App extends Component {
     const filteredMonsters = monsters.filter((monster)=>{
       return monster.name.toLowerCase().includes(searchField)
     })
-     return <div className='App'>
-      <h1 className='app-title'>Monster Rolodex</h1>
-    <SearchBox 
-      onChangeHandler = {onSearchChange} 
-      placeholder='search monsters'
-      className='monsters-search-box'
-      />
-    <CardList monsters={filteredMonsters} />
-      </div>
+     return 
     }
 }
 
